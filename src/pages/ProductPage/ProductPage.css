@@ -1,0 +1,294 @@
+/* src/pages/ProductPage/ProductPage.css */
+
+.product-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Top Section - Product Main */
+  .product-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Left Side - Images */
+  .product-images-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-image {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Right Side - Details */
+  .product-details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Action Buttons */
+  .product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .action-button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .action-button.primary {
+    background-color: #333;
+    color: white;
+  }
+  
+  .action-button.primary:hover {
+    background-color: #555;
+  }
+  
+  /* Seller Card */
+  .seller-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .seller-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .seller-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .seller-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .seller-username {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .seller-rating {
+    font-size: 0.9rem;
+  }
+  
+  .create-bundle-button {
+    padding: 0.75rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .create-bundle-button:hover {
+    background-color: #555;
+  }
+  
+  /* Sections */
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  /* Seller Items Grid */
+  .seller-items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .item-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .item-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .visit-shop-button {
+    padding: 0.75rem 2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .visit-shop-button:hover {
+    background-color: #555;
+  }
+  
+  /* Reviews */
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .review-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .reviewer-info {
+    flex: 1;
+  }
+  
+  .reviewer-username {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .review-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin: 0;
+  }
+  
+  .review-stars {
+    font-size: 0.9rem;
+  }
+  
+  .review-content {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .review-image {
+    width: 60px;
+    height: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .review-text {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+    flex: 1;
+  }
+  
+  /* Similar Items - Horizontal Scroll */
+  .similar-items-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .similar-items-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .similar-items-scroll::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  .similar-items-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .similar-items-scroll .item-card {
+    min-width: 150px;
+    flex-shrink: 0;
+  }
