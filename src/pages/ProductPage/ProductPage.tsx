@@ -1,9 +1,34 @@
 // src/pages/ProductPage/ProductPage.tsx
 // src/pages/ProductPage/ProductPage.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductPage.css';
 
 function ProductPage() {
+  // State to track which image is currently displayed
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Array of product images (you can add more later)
+  const productImages = [
+    "https://picsum.photos/400/500?random=1",
+    "https://picsum.photos/400/500?random=2",
+    "https://picsum.photos/400/500?random=3",
+    "https://picsum.photos/400/500?random=4"
+  ];
+
+  // Go to next image
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === productImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // Go to previous image
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? productImages.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div className="product-page">
       {/* Top Section - Product Details */}
@@ -12,9 +37,22 @@ function ProductPage() {
         <div className="product-images-section">
           <div className="main-image">
             <img 
-              src="https://picsum.photos/400/500" 
+              src={productImages[currentImageIndex]} 
               alt="Product" 
             />
+            
+            {/* Navigation Arrows */}
+            <button className="image-arrow left-arrow" onClick={prevImage}>
+              ←
+            </button>
+            <button className="image-arrow right-arrow" onClick={nextImage}>
+              →
+            </button>
+
+            {/* Image Counter */}
+            <div className="image-counter">
+              {currentImageIndex + 1} / {productImages.length}
+            </div>
           </div>
         </div>
 
@@ -55,16 +93,16 @@ function ProductPage() {
         <h2 className="section-title">More From This Seller</h2>
         <div className="seller-items-grid">
           <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=1" alt="Item" />
+            <img src="https://picsum.photos/150/200?random=5" alt="Item" />
           </div>
           <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=2" alt="Item" />
+            <img src="https://picsum.photos/150/200?random=6" alt="Item" />
           </div>
           <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=3" alt="Item" />
+            <img src="https://picsum.photos/150/200?random=7" alt="Item" />
           </div>
           <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=4" alt="Item" />
+            <img src="https://picsum.photos/150/200?random=8" alt="Item" />
           </div>
         </div>
         <button className="visit-shop-button">Visit Shop</button>
@@ -84,7 +122,7 @@ function ProductPage() {
               <div className="review-stars">⭐⭐⭐⭐⭐</div>
             </div>
             <div className="review-content">
-              <img src="https://picsum.photos/60/80?random=5" alt="Review item" className="review-image" />
+              <img src="https://picsum.photos/60/80?random=9" alt="Review item" className="review-image" />
               <p className="review-text">Fast shipping & item is exactly as described. Thank you!</p>
             </div>
           </div>
@@ -99,7 +137,7 @@ function ProductPage() {
               <div className="review-stars">⭐⭐⭐⭐⭐</div>
             </div>
             <div className="review-content">
-              <img src="https://picsum.photos/60/80?random=6" alt="Review item" className="review-image" />
+              <img src="https://picsum.photos/60/80?random=10" alt="Review item" className="review-image" />
               <p className="review-text">Item in great condition, fast shipping, thank you!!</p>
             </div>
           </div>
@@ -114,7 +152,7 @@ function ProductPage() {
               <div className="review-stars">⭐⭐⭐⭐⭐</div>
             </div>
             <div className="review-content">
-              <img src="https://picsum.photos/60/80?random=7" alt="Review item" className="review-image" />
+              <img src="https://picsum.photos/60/80?random=11" alt="Review item" className="review-image" />
               <p className="review-text">Item was just as described and in great condition :) thanks</p>
             </div>
           </div>
@@ -126,19 +164,19 @@ function ProductPage() {
         <h2 className="section-title">You also might like</h2>
         <div className="similar-items-scroll">
           <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=8" alt="Similar item" />
-          </div>
-          <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=9" alt="Similar item" />
-          </div>
-          <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=10" alt="Similar item" />
-          </div>
-          <div className="item-card">
-            <img src="https://picsum.photos/150/200?random=11" alt="Similar item" />
-          </div>
-          <div className="item-card">
             <img src="https://picsum.photos/150/200?random=12" alt="Similar item" />
+          </div>
+          <div className="item-card">
+            <img src="https://picsum.photos/150/200?random=13" alt="Similar item" />
+          </div>
+          <div className="item-card">
+            <img src="https://picsum.photos/150/200?random=14" alt="Similar item" />
+          </div>
+          <div className="item-card">
+            <img src="https://picsum.photos/150/200?random=15" alt="Similar item" />
+          </div>
+          <div className="item-card">
+            <img src="https://picsum.photos/150/200?random=16" alt="Similar item" />
           </div>
         </div>
       </div>

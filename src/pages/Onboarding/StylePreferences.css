@@ -1,0 +1,120 @@
+/* src/pages/Onboarding/StylePreferences.css */
+
+.style-preferences-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    min-height: 70vh;
+  }
+  
+  .preferences-header {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  
+  .preferences-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Styles Grid */
+  .styles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .style-card {
+    position: relative;
+    aspect-ratio: 4/5;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .style-card:hover {
+    border-color: #999;
+  }
+  
+  .style-card.selected {
+    border-color: #333;
+  }
+  
+  .style-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .style-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  
+  .style-name {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  /* Action Buttons */
+  .preferences-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .skip-button {
+    padding: 0.75rem 2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .skip-button:hover {
+    background-color: #555;
+  }
+  
+  .next-button {
+    padding: 0.75rem 2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .next-button:hover {
+    background-color: #555;
+  }
+  
+  .next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .next-button:disabled:hover {
+    background-color: #ccc;
+  }

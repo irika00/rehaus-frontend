@@ -1,9 +1,12 @@
 // src/pages/Auth/SignUp/SignUp.tsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
 
+
 function SignUp() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -22,6 +25,8 @@ function SignUp() {
   const handleSignup = (e) => {
     e.preventDefault();
     console.log('Signup:', formData);
+    // Redirect to style preferences after signup
+    navigate('/onboarding/style-preferences');
   };
 
   const handleGoogleSignup = () => {
